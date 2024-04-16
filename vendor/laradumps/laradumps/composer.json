@@ -1,0 +1,67 @@
+{
+    "name": "laradumps/laradumps",
+    "description": "A Dump Component for Laravel.",
+    "homepage": "https://github.com/laradumps/laradumps",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Luan Freitas",
+            "email": "luanfreitas10@protonmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "nunomaduro/termwind": "^1.15.1|^2.0.0",
+        "illuminate/support": "^9.0|^10.0|^11.0",
+        "illuminate/mail": "^9.0|^10.0|^11.0",
+        "laradumps/laradumps-core": "^1.2"
+    },
+    "require-dev": {
+        "orchestra/testbench-core": "^7.0",
+        "laravel/framework": "^11.0",
+        "symfony/var-dumper": "^5.4.0|^6.4.0|^7.0.3",
+        "pestphp/pest": "^2.32",
+        "laravel/pint": "^1.13.7",
+        "larastan/larastan": "^2.7",
+        "mockery/mockery": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaraDumps\\LaraDumps\\": "src/"
+        },
+        "files": [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaraDumps\\LaraDumps\\Tests\\" : "tests"
+        }
+    },
+    "scripts": {
+        "test:pint": "./vendor/bin/pint --test",
+        "pint:fix": "./vendor/bin/pint",
+        "test:types": "./vendor/bin/phpstan analyse --ansi --memory-limit=-1",
+        "test:tests": "./vendor/bin/pest --order-by random",
+        "verify": [
+            "@cs-fixer",
+            "@test:types",
+            "@test:tests"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaraDumps\\LaraDumps\\LaraDumpsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

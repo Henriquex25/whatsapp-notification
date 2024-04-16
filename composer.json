@@ -1,0 +1,26 @@
+{
+    "name": "henriquex25/whatsapp-notification",
+    "description": "Implementa um novo drive de notificações para enviar requisições para api de whatsapp",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Henriquex25\\WhatsappNotification\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Henrique Miranda",
+            "email": "sergioh003@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/auth": "^11.0",
+        "illuminate/http": "^11.0",
+        "illuminate/config": "^11.0",
+        "laravel/helpers": "^1.7"
+    },
+    "require-dev": {
+        "laradumps/laradumps": "^2.0",
+        "barryvdh/laravel-debugbar": "^3.13"
+    }
+}
