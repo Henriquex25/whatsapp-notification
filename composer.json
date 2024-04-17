@@ -10,7 +10,9 @@
     "authors": [
         {
             "name": "Henrique Miranda",
-            "email": "sergioh003@gmail.com"
+            "email": "sergioh003@gmail.com",
+            "homepage": "https://github.com/rennokki",
+            "role": "Developer"
         }
     ],
     "require": {
